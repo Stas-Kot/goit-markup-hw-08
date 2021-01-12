@@ -3,42 +3,40 @@
 }
 .team-title {
   color: var(--title-text-color);
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.167;
+  @include font(28px, 700, 33px);
   text-align: center;
-  margin-top: 0;
-  margin-bottom: 50px;
+  margin: 0;
 }
 .team-item {
-  width: 270px;
+  //   width: 270px;
   background-color: var(--title-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   text-align: center;
+  margin-top: 30px;
   &-content {
-    padding: 30px 32px;
+    padding-top: 30px;
+    padding-bottom: 24px;
   }
   &-title {
     color: var(--title-text-color);
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.188;
+    @include font(16px, 500, 19px);
     margin: 0;
   }
   &-description {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.188;
+    @include font(16px, 400, 19px);
     margin-top: 10px;
     margin-bottom: 0;
   }
 }
 
 .social-list {
+  margin-left: auto;
+  margin-right: auto;
+  width: 206px;
   display: flex;
-  margin-top: 10px;
+  margin-top: 16px;
 }
 
 .social-item > .link {
@@ -71,7 +69,7 @@
   fill: var(--svg-color);
 }
 
-.list.container {
-  display: flex;
-  justify-content: space-between;
-}
+// .list.team {
+//   display: flex;
+//   justify-content: space-between;
+// }

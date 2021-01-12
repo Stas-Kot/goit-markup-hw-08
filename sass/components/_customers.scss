@@ -1,14 +1,20 @@
 .customers-title {
   color: var(--title-text-color);
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.167;
+  @include font(28px, 700, 33px);
   text-align: center;
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+}
+.customers {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+}
+.customer-item {
+  flex-basis: calc((100% - 2 * 30px) / 2);
+  margin: 15px;
 }
 .customer-link {
-  width: 170px;
   height: 90px;
   border: 1px solid var(--svg-color);
   border-radius: 4px;

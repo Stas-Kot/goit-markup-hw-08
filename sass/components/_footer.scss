@@ -2,20 +2,17 @@
   display: inline-block;
   color: var(--title-color);
   font-family: 'Raleway', sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.192;
+  @include font(24px, 700, 28px);
   margin-bottom: 20px;
 }
 .footer {
+  text-align: center;
   background-color: var(--bcg-secondary-color);
   padding: 60px;
   & .link {
     color: var(--footer-text-color);
     text-decoration: none;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.714;
+    @include font(14px, 400, 24px);
     &:hover,
     &:focus {
       color: var(--accent-color);
@@ -25,28 +22,26 @@
   {
     color: var(--title-color);
   }
-  & > .container {
-    display: flex;
-    align-items: baseline;
-  }
+  // & > .container {
+  //   display: flex;
+  //   align-items: baseline;
+  // }
 }
 
 address .item:not(:last-child) {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
 }
 b {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.143;
+  @include font(14px, 700, 16px);
   text-transform: uppercase;
   color: var(--title-color);
 }
-.address .list {
-  padding-right: 14px;
-}
+// .address .list {
+//   padding-right: 14px;
+// }
 
 .social-media {
-  margin-left: 70px;
+  margin-top: 60px;
   & .link {
     background-color: rgba(255, 255, 255, 0.1);
   }
@@ -59,14 +54,16 @@ b {
 }
 
 .subscription {
-  margin-left: 93px;
+  margin-top: 60px;
 }
 .subscription-form {
-  display: flex;
+  // display: flex;
   position: relative;
   margin-top: 20px;
   & .button {
-    margin-left: 12px;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
 
     display: flex;
     align-items: center;
@@ -77,8 +74,8 @@ b {
   font: inherit;
   margin: 0;
   padding: 15px;
-  padding-left: 20px;
-  width: 350px;
+  padding-left: 16px;
+  width: 100%;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
@@ -88,7 +85,7 @@ b {
 
 .subscription-label {
   position: absolute;
-  top: 50%;
+  top: 25px;
   left: 16px;
   transform: translateY(-50%);
   padding-left: 5px;

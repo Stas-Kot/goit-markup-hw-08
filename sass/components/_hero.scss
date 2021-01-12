@@ -5,19 +5,16 @@
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url('../images/hero/img-bg.jpg');
+    url('../images/hero/img-bg-480.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
-  padding: 200px 100px;
+  padding: 118px 30px;
 }
 .hero-title {
   margin: 0;
   margin-bottom: 30px;
   color: var(--title-color);
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.364;
-  letter-spacing: 0.06em;
+  @include font(26px, 900, 42px) letter-spacing: 0.06em;
   text-transform: uppercase;
 }
