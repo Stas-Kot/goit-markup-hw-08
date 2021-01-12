@@ -1,0 +1,115 @@
+.logo.inverse {
+  display: inline-block;
+  color: var(--title-color);
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.192;
+  margin-bottom: 20px;
+}
+.footer {
+  background-color: var(--bcg-secondary-color);
+  padding: 60px;
+  & .link {
+    color: var(--footer-text-color);
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.714;
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+  }
+  & a[href="https://goo.gl/maps/KZqqGX3hnb8J8rTS9"]
+  {
+    color: var(--title-color);
+  }
+  & > .container {
+    display: flex;
+    align-items: baseline;
+  }
+}
+
+address .item:not(:last-child) {
+  margin-bottom: 9px;
+}
+b {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.143;
+  text-transform: uppercase;
+  color: var(--title-color);
+}
+.address .list {
+  padding-right: 14px;
+}
+
+.social-media {
+  margin-left: 70px;
+  & .link {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  & .social-icon {
+    fill: var(--title-color);
+  }
+  & .social-list {
+    margin-top: 20px;
+  }
+}
+
+.subscription {
+  margin-left: 93px;
+}
+.subscription-form {
+  display: flex;
+  position: relative;
+  margin-top: 20px;
+  & .button {
+    margin-left: 12px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+}
+.subscription-input {
+  font: inherit;
+  margin: 0;
+  padding: 15px;
+  padding-left: 20px;
+  width: 350px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: transparent;
+  color: var(--title-color);
+}
+
+.subscription-label {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  padding-left: 5px;
+  padding-right: 5px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  transition: transform 250ms var(--timing-function);
+
+  color: var(--footer-text-color);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  .subscription-input:focus + &,
+  .subscription-input:not(:placeholder-shown) + & {
+    transform: translateY(-35px);
+    background-color: var(--bcg-secondary-color);
+  }
+}
+
+.subscription-icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+}

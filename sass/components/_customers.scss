@@ -1,0 +1,32 @@
+.customers-title {
+  color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.167;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+.customer-link {
+  width: 170px;
+  height: 90px;
+  border: 1px solid var(--svg-color);
+  border-radius: 4px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: border-color 250ms var(--timing-function);
+  &:hover,
+  &:focus {
+    border-color: var(--accent-color);
+  }
+}
+.customer-icon {
+  transition: fill 250ms var(--timing-function);
+  .customer-link:hover &,
+  .customer-link:focus & {
+    fill: var(--accent-color);
+  }
+}
