@@ -36,3 +36,23 @@
     fill: var(--accent-color);
   }
 }
+@media screen and (min-width: 768px) {
+  .customer-item {
+    flex-basis: calc((100% - 3 * 30px) / 3);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .customers {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    &-title {
+      @include font(36px, 700, 42px);
+      margin-bottom: 50px;
+    }
+  }
+  .customer-item {
+    flex-basis: 170px;
+    margin: 0;
+  }
+}
