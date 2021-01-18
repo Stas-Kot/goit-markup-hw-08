@@ -24,7 +24,6 @@
     color: var(--title-color);
   }
 }
-
 .address .item:not(:last-child) {
   margin-bottom: 8px;
 }
@@ -95,25 +94,16 @@ b {
   .social-media {
     margin-top: 60px;
   }
-  .subscription-input {
-    width: 100%;
-  }
 }
 @media screen and (min-width: 768px) {
   .thumb {
     display: flex;
     justify-content: space-between;
   }
-  .footer {
-    padding: 60px 80px;
-  }
   .subscription-form {
     width: 450px;
     margin-left: auto;
     margin-right: auto;
-  }
-  .subscription-input {
-    width: 450px;
   }
 }
 @media screen and (max-width: 1199px) {
@@ -133,9 +123,12 @@ b {
     @include font(26px, 700, 31px);
   }
   .footer {
-    padding: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: initial;
     & .container {
       display: flex;
+      justify-content: space-between;
       align-items: baseline;
     }
   }
@@ -159,7 +152,7 @@ b {
   }
   .subscription-input {
     padding-left: 20px;
-    width: 350px;
+    // width: 350px;
   }
   .subscription-label {
     top: 50%;

@@ -1,16 +1,6 @@
-.portfolio-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: calc(-1 * var(--card-set-gap));
-  margin-top: calc(-1 * var(--card-set-gap));
-}
 .card {
   display: block;
-  flex-basis: calc(100% / 3 - 30px);
-  margin-left: var(--card-set-gap);
-  margin-top: var(--card-set-gap);
 }
-
 .card-link {
   display: block;
   text-decoration: none;
@@ -21,7 +11,6 @@
       1px 4px 6px rgba(0, 0, 0, 0.16);
   }
 }
-
 .overlay {
   position: relative;
   overflow: hidden;
@@ -32,16 +21,12 @@
   left: 0;
   width: 100%;
   height: 100%;
-
   opacity: 0;
-
   margin: 0;
   padding: 63px 24px;
   background-color: rgba(33, 150, 243, 0.9);
   color: var(--title-color);
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.56;
+  @include font(18px, 400, 28px);
   transform: translateY(100%);
   transition: transform 250ms var(--timing-function),
     opacity 250ms var(--timing-function);
@@ -51,7 +36,6 @@
     transform: translateY(0);
   }
 }
-
 .card-content {
   padding: 20px 24px;
   border-left: 1px solid #eeeeee;
@@ -60,20 +44,37 @@
 }
 .portfolio-list-title {
   margin: 0;
-
   color: var(--title-text-color);
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
+  @include font(18px, 700, 36px);
   letter-spacing: 0.06em;
 }
-
 .portfolio-list-item {
   margin-top: 4px;
   margin-bottom: 0;
 
   color: var(--primary-text-color);
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.875;
+  @include font(16px, 400, 30px);
+}
+@media screen and (max-width: 767px) {
+  .card:not(:last-child) {
+    margin-bottom: var(--card-set-gap);
+  }
+}
+@media screen and (min-width: 768px) {
+  .portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(-1 * var(--card-set-gap));
+    margin-top: calc(-1 * var(--card-set-gap));
+  }
+  .card {
+    flex-basis: calc(100% / 2 - var(--card-set-gap);
+    margin-left: var(--card-set-gap);
+    margin-top: var(--card-set-gap);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .card {
+    flex-basis: calc(100% / 3 - var(--card-set-gap));
+  }
 }
