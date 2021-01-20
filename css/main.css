@@ -110,116 +110,145 @@ header {
   color: var(--accent-color);
 }
 
-.site-nav,
-.contacts-nav {
-  display: none;
+.menu-container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .menu-container {
+    background-color: var(--title-color);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+  .menu-container.is-open {
+    display: block;
+  }
+}
+
+.header {
+  position: relative;
+}
+
+.menu-btn {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
 }
 
 @media screen and (min-width: 768px) {
-  .site-nav a,
-  .contacts-nav a {
-    display: block;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1.143;
-    letter-spacing: 0.02em;
-    text-decoration: none;
-    padding-top: 32px;
-    padding-bottom: 32px;
-  }
-  .contacts-nav {
-    display: block;
-  }
-  .current {
-    position: relative;
-  }
-  .link.current::after {
-    display: block;
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -1px;
-    background-color: var(--accent-color);
-    width: 100%;
-    height: 4px;
-    border-radius: 2px;
-  }
-  .site-nav .link {
-    color: var(--title-text-color);
-  }
-  .site-nav .link:hover, .site-nav .link:focus, .site-nav .link.current {
-    color: var(--accent-color);
-  }
-  .contacts-nav .link {
-    display: inline-flex;
-    color: var(--primary-text-color);
-  }
-  .contacts-nav .link:hover, .contacts-nav .link:focus {
-    color: var(--accent-color);
-  }
-  .contacts-nav .link,
-  .site-nav .link,
-  .footer .link {
-    transition: color 250ms var(--timing-function);
-  }
-  .header > .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .navigation {
-    display: flex;
-    align-items: center;
-  }
-  .site-nav {
-    display: flex;
-    margin-left: 88px;
-  }
-  .site-nav .item + .item {
-    margin-left: 50px;
-  }
-  .link-contact {
-    align-items: center;
-  }
-  .mail-icon, .tel-icon {
-    width: 14px;
-    height: 10px;
-    fill: currentColor;
-    margin-right: 10px;
-  }
-  .tel-icon {
-    width: 10px;
-    height: 14px;
+  .menu-btn {
+    display: none;
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .contacts-nav a {
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 1.167;
-    padding: 5px 0;
-  }
+.menu-btn .icon-cross {
+  display: none;
 }
 
-@media screen and (min-width: 1200px) {
-  .site-nav {
-    margin-left: 93px;
-  }
-  .contacts-nav {
+.menu-btn.is-open .icon-cross {
+  display: block;
+}
+
+.menu-btn.is-open .icon-menu {
+  display: none;
+}
+
+.site-nav {
+  margin-bottom: 65px;
+}
+
+.site-nav .item:not(:last-child) {
+  margin-bottom: 44px;
+}
+
+.contacts-nav .item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.site-nav a,
+.contacts-nav a {
+  display: inline-flex;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.167;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+
+.current {
+  position: relative;
+}
+
+.link.current::after {
+  display: block;
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  background-color: var(--accent-color);
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+}
+
+.site-nav .link {
+  color: var(--title-text-color);
+}
+
+.site-nav .link:hover, .site-nav .link:focus, .site-nav .link.current {
+  color: var(--accent-color);
+}
+
+.contacts-nav .link {
+  color: var(--primary-text-color);
+}
+
+.contacts-nav .link:hover, .contacts-nav .link:focus {
+  color: var(--accent-color);
+}
+
+.contacts-nav .link,
+.site-nav .link,
+.footer .link {
+  transition: color 250ms var(--timing-function);
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.link-contact {
+  align-items: center;
+}
+
+.mail-icon, .tel-icon {
+  width: 14px;
+  height: 10px;
+  fill: currentColor;
+  margin-right: 10px;
+}
+
+.tel-icon {
+  width: 10px;
+  height: 14px;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-container {
     display: flex;
-    align-items: center;
-  }
-  .contacts-nav .item + .item {
-    margin-left: 50px;
-  }
-  .mail-icon, .tel-icon {
-    width: 16px;
-    height: 12px;
-  }
-  .tel-icon {
-    width: 10px;
-    height: 16px;
   }
 }
 
