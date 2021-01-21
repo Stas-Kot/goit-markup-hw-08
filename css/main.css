@@ -111,13 +111,13 @@ header {
 }
 
 .menu-container {
-  padding-top: 60px;
-  padding-bottom: 60px;
   text-align: center;
 }
 
 @media screen and (max-width: 767px) {
   .menu-container {
+    padding-top: 60px;
+    padding-bottom: 60px;
     background-color: var(--title-color);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
     display: none;
@@ -160,18 +160,6 @@ header {
 
 .menu-btn.is-open .icon-menu {
   display: none;
-}
-
-.site-nav {
-  margin-bottom: 65px;
-}
-
-.site-nav .item:not(:last-child) {
-  margin-bottom: 44px;
-}
-
-.contacts-nav .item:not(:last-child) {
-  margin-bottom: 16px;
 }
 
 .site-nav a,
@@ -226,8 +214,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
 }
 
 .link-contact {
@@ -244,6 +230,92 @@ header {
 .tel-icon {
   width: 10px;
   height: 14px;
+}
+
+@media screen and (max-width: 767px) {
+  .navigation {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .site-nav {
+    margin-bottom: 65px;
+  }
+  .site-nav .item:not(:last-child) {
+    margin-bottom: 44px;
+  }
+  .contacts-nav .item:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 100%;
+  }
+  .site-nav a {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.143;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .contacts-nav a {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.167;
+    padding: 5px 0;
+  }
+  .link.current::after {
+    bottom: -1px;
+  }
+  .site-nav {
+    display: flex;
+    margin-left: 88px;
+  }
+  .site-nav .item + .item {
+    margin-left: 50px;
+  }
+  .contacts-nav {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.192;
+  }
+  .contacts-nav a {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.143;
+  }
+  .contacts-nav a {
+    padding: 32px 0;
+  }
+  .site-nav {
+    margin-left: 93px;
+  }
+  .contacts-nav {
+    display: flex;
+    align-items: center;
+  }
+  .contacts-nav .item + .item {
+    margin-left: 30px;
+  }
+  .mail-icon, .tel-icon {
+    width: 16px;
+    height: 12px;
+  }
+  .tel-icon {
+    width: 10px;
+    height: 16px;
+  }
 }
 
 .logo.inverse {
