@@ -21,6 +21,9 @@
   left: 50%;
   transform: translate(-50%, -50%) scale(1) rotate(0);
   width: 90%;
+  @media screen and (max-width: 350px) {
+    top: 60%;
+  }
   @media (max-width: 850px) and (orientation: landscape) {
     top: 90%;
   }

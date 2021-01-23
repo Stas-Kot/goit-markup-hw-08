@@ -43,6 +43,7 @@ address {
 img {
   max-width: 100%;
   display: block;
+  height: auto;
 }
 
 p {
@@ -605,6 +606,12 @@ b {
   border-radius: 4px;
   transition: transform 400ms ease-in-out;
   padding: 40px;
+}
+
+@media screen and (max-width: 350px) {
+  .modal {
+    top: 60%;
+  }
 }
 
 @media (max-width: 850px) and (orientation: landscape) {
