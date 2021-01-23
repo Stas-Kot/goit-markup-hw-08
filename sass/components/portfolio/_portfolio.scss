@@ -71,6 +71,11 @@
     flex-basis: calc(100% / 2 - var(--card-set-gap);
     margin-left: var(--card-set-gap);
     margin-top: var(--card-set-gap);
+    &:nth-child(1) .card-content {
+      @media screen and (max-width: 1199px) {
+        padding-bottom: 56px;
+      }
+    }
   }
 }
 @media screen and (min-width: 1200px) {

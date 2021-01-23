@@ -98,7 +98,7 @@ b {
 @media screen and (min-width: 768px) {
   .thumb {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
   }
   .subscription-form {
     width: 450px;
@@ -128,7 +128,6 @@ b {
     text-align: initial;
     & .container {
       display: flex;
-      justify-content: space-between;
       align-items: baseline;
     }
   }
@@ -140,12 +139,14 @@ b {
   }
   .social-media {
     margin-left: 70px;
+    margin-top: 12px;
   }
   .subscription {
     margin-left: 93px;
   }
   .subscription-form {
     display: flex;
+    width: 569px;
     & .button {
       margin-left: 12px;
     }

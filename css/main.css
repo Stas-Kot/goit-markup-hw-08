@@ -436,7 +436,7 @@ b {
 @media screen and (min-width: 768px) {
   .thumb {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
   }
   .subscription-form {
     width: 450px;
@@ -469,7 +469,6 @@ b {
   }
   .footer .container {
     display: flex;
-    justify-content: space-between;
     align-items: baseline;
   }
   .address .item:not(:last-child) {
@@ -480,12 +479,14 @@ b {
   }
   .social-media {
     margin-left: 70px;
+    margin-top: 12px;
   }
   .subscription {
     margin-left: 93px;
   }
   .subscription-form {
     display: flex;
+    width: 569px;
   }
   .subscription-form .button {
     margin-left: 12px;
@@ -1291,6 +1292,12 @@ b {
     flex-basis: calc(100% / 2 - var(--card-set-gap));
     margin-left: var(--card-set-gap);
     margin-top: var(--card-set-gap);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .card:nth-child(1) .card-content {
+    padding-bottom: 56px;
   }
 }
 
